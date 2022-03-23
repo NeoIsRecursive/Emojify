@@ -17,7 +17,7 @@ $emojify = new Emojify();
 
 $string = 'hello here is an emoji :smile:';
 
-$emojify->replaceShortNameWithEmoji($string);
+$emojify->emojifyString($string);
 //string(28) "hello, here is an emoji 😄"
 
 $emojify->isShortname(":sunglasses:");
