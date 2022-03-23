@@ -1,0 +1,16 @@
+{
+    "name": "neoisrecursive/emojify",
+    "description": "convert shortnames to emojis and see if shortname is emoji",
+    "autoload": {
+        "psr-4": {
+            "Neoisrecursive\\Emojify\\": "src/"
+        }
+    },
+    "authors": [
+        {
+            "name": "NeoIsRecursive",
+            "email": "64473191+NeoIsRecursive@users.noreply.github.com"
+        }
+    ],
+    "require": {}
+}
