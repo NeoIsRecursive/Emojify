@@ -6,7 +6,7 @@
     "time":"2022-03-23",
     "autoload": {
         "psr-4": {
-            "Neoisrecursive\\Emojify\\": "src/"
+            "Neoisrecursive\\": "src/"
         }
     },
     "authors": [

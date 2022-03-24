@@ -2,7 +2,7 @@
 
 declare(strict_types=1);
 
-namespace Neoisrecursive\Emojify;
+namespace Neoisrecursive;
 
 class Emojify
 {
@@ -14,17 +14,17 @@ class Emojify
         $this->emojis = json_decode($emojiFile, true)['emojis'];
     }
 
-    public function isShortname(string $possibleEmoji): bool
+    public function IsShortname(string $possibleShortname): bool
     {
         foreach ($this->emojis as $emoji) {
-            if ($emoji['shortname'] === $possibleEmoji) {
+            if ($emoji['shortname'] === $possibleShortname) {
                 return true;
             }
         }
         return false;
     }
 
-    public function shortNameToEmoji(string $shortname): string
+    public function ShortnameToEmoji(string $shortname): string
     {
         foreach ($this->emojis as $emoji) {
             if ($emoji['shortname'] === $shortname) {
@@ -34,10 +34,10 @@ class Emojify
         return $shortname;
     }
 
-    public function emojifyString(string $text): string
+    public function WholeString(string $text): string
     {
         $text = preg_replace_callback('/(?!::):(?! ).(([^ :])*.*?):?/', function ($e) {
-            return $this->isShortname($e[0]) ? $this->shortNameToEmoji($e[0]) : $e[0];
+            return $this->isShortname($e[0]) ? $this->shortnameToEmoji($e[0]) : $e[0];
         }, $text);
 
         return $text;

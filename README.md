@@ -17,12 +17,12 @@ $emojify = new Emojify();
 
 $string = 'hello here is an emoji :smile:';
 
-$emojify->emojifyString($string);
-//string(28) "hello, here is an emoji 😄"
+$emojify->WholeString($string);
+// hello, here is an emoji 😄
 
-$emojify->isShortname(":sunglasses:");
+$emojify->IsShortname(':sunglasses:');
 //bool(true)
 
-$emojify->shortNameToEmoji(':sunglasses:')
+$emojify->ShortnameToEmoji(':sunglasses:');
 //string(4) "😎"
 ```
