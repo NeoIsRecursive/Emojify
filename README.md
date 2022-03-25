@@ -11,7 +11,7 @@ Made for a md editor/renderer and I didn't find any package that worked and I ha
 ## use
 
 ```
-use Neoisrecursive\Emojify\Emojify;
+use Neoisrecursive\Emojify;
 
 $emojify = new Emojify();
 
